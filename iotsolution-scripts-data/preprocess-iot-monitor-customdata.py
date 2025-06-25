@@ -144,7 +144,7 @@ def sendtransactiondata(maintopic,mainproducerid,VIPERPORT,index,preprocesstopic
      preprocessconditions=''
          
      # Add a 7000 millisecond maximum delay for VIPER to wait for Kafka to return confirmation message is received and written to topic 
-     delay=70
+     delay=120
      # USE TLS encryption when sending to Kafka Cloud (GCP/AWS/Azure)
      enabletls=1
      array=0
@@ -152,7 +152,7 @@ def sendtransactiondata(maintopic,mainproducerid,VIPERPORT,index,preprocesstopic
      topicid=-999
     
      rawdataoutput=1
-     asynctimeout=120
+     asynctimeout=300
      timedelay=0
 
      jsoncriteria='uid=metadata.dsn,filter:allrecords~\
